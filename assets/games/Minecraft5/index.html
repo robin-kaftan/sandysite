@@ -19,6 +19,11 @@
             game download for offline is avaliable <a href="../Eaglercraft_1.5.2.zip">here</a>
         </p>
         <hr>
-        <iframe class="gameframe" src="./game.html"></iframe>
+        <iframe class="gameframe" src="./game.html" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation"></iframe>
+
+        <script>
+            const iframe = document.querySelector('iframe');
+            iframe.contentWindow.focus();
+        </script>
     </body>
 </html>
