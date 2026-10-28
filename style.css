@@ -1,0 +1,77 @@
+body {
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+hr {
+    width: 100%;
+    height: 0;
+    border: 2px inset;
+}
+
+button {
+    /* 1. Allows the button width to match the image + single-line title */
+    width: fit-content; 
+    position: relative; /* Acts as an anchor for the absolute <p> tag */
+    
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+button > img {
+    height: 4rem;
+    width: auto;
+    image-rendering: pixelated;
+    display: block;
+    border: 2px outset;
+}
+
+button > span {
+    /* 2. Forces the title to stay rigidly on one single line */
+    white-space: nowrap; 
+    display: block;
+}
+
+button > p {
+    display: none;
+    position: absolute; 
+    top: 100%;
+    left: 0;
+    width: 100%; 
+    box-sizing: border-box;
+    overflow-wrap: break-word; 
+    margin: 4px 0 0 0;
+    background: #222;
+    color: #fff;
+    padding: 4px;
+    border: 1px solid #444;
+    z-index: 10;
+}
+
+button:hover > p {
+    display: block;
+}
+
+.gameframe {
+    width: 100%;
+    height: calc(100dvh - 2rem);
+    display: block;
+}
+
+ul {
+    text-align: left;
+}
+
+.left {
+    text-align: left;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 1lh;
+    max-height: 15lh;
+}
